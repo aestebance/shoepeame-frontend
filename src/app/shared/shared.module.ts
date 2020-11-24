@@ -10,6 +10,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
   imports: [
     CommonModule,
     SharedRoutingModule
+  ],
+  exports: [
+    GalleryComponent
   ]
 })
 export class SharedModule { }

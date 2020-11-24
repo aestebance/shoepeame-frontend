@@ -1,1 +1,48 @@
-<p>header works!</p>
+<div class="main-header">
+  <div class="intro-bar__container">
+    <div class="intro-bar__logo">
+      <div class="icon__container">
+        <div class="icon__content-letter">
+          <p class="icon__letter">S</p>
+        </div>
+      </div>
+      <div class="name__container">
+        <p class="name__text">Shopéame!</p>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bar__container">
+    <div class="nav-bar__menu">
+      <a routerLink="">
+        <div class="nav-bar__item" [routerLinkActiveOptions]="{exact: true}"
+             routerLinkActive="nav-bar__item--active">
+          <div class="nav-bar__icon nav-bar__home" [routerLinkActiveOptions]="{exact: true}"
+               routerLinkActive="nav-bar__home--active">
+          </div>
+          <div class="nav-bar__subtitle">
+            <p class="nav-bar__text" [routerLinkActiveOptions]="{exact: true}"
+               routerLinkActive="nav-bar__text--active">Home</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/products">
+        <div class="nav-bar__item nav-bar__item--fix" routerLinkActive="nav-bar__item--active">
+          <div class="nav-bar__icon nav-bar__prods" routerLinkActive="nav-bar__prods--active">
+          </div>
+          <div class="nav-bar__subtitle">
+            <p class="nav-bar__text" routerLinkActive="nav-bar__text--active">Prods.</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/manage">
+        <div class="nav-bar__item" routerLinkActive="nav-bar__item--active">
+          <div class="nav-bar__icon nav-bar__gestion" routerLinkActive="nav-bar__gestion--active">
+          </div>
+          <div class="nav-bar__subtitle">
+            <p class="nav-bar__text" routerLinkActive="nav-bar__text--active">Gestión</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
