@@ -3,14 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { ArticleComponent } from './components/article/article.component';
+import {FormsModule} from '@angular/forms';
+import {StarRatingModule} from 'angular-star-rating';
 
 
 @NgModule({
-  declarations: [GalleryComponent],
+  declarations: [GalleryComponent, ArticleComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule,
+    StarRatingModule.forRoot()
   ],
+  providers: [],
   exports: [
     GalleryComponent
   ]

@@ -1,0 +1,25 @@
+<div class="b-col">
+  <figure class="b-figure">
+    <img class="b-figure__img" src="{{product.image}}" alt="{{product.name}}">
+    <figcaption class="b-figure__text">
+      {{product.description}}
+    </figcaption>
+    <p class="b-figure__price">${{product.price}}</p>
+  </figure>
+  <div class="b-figure b-figure__opt">
+    {{product.description}}
+  </div>
+  <div class="b-figure__footer">
+    <div class="b-figure__stars">
+      <star-rating [starType]="'svg'" [rating]="product.stars"></star-rating>
+      <div class="b-figure__rating">
+        {{product.stars}}
+      </div>
+    </div>
+    <a routerLink="">
+      <div class="b-figure__button">
+        <p class="b-figure__btext">Editar</p>
+      </div>
+    </a>
+  </div>
+</div>
