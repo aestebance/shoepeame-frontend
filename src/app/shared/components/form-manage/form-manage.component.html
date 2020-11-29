@@ -1,0 +1,41 @@
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="articleRegisteredForm">
+  <div class="b-form">
+  <div class="b-form__label">
+    <p class="b-form__description">Nombre del producto:</p>
+  </div>
+    <div class="b-form__inputDiv">
+      <input formControlName="name" required [(ngModel)]="product.name" class="b-form__input p-inputtext-sm" placeholder="Por ej: Tiesto de planta" type="text" pInputText/>
+    </div>
+    <div class="b-form__label b-form__label--inter">
+      <p class="b-form__description">Precio:</p>
+    </div>
+    <div class="b-form__inputDiv">
+      <input formControlName="price" [(ngModel)]="product.price" class="b-form__input p-inputtext-sm" placeholder="Por ej: 9.50" type="text" pInputText  />
+    </div>
+    <div class="b-form__label b-form__label--inter">
+      <p class="b-form__description">Descripción:</p>
+    </div>
+    <div class="b-form__inputDiv">
+      <input formControlName="description" [(ngModel)]="product.description" class="b-form__input p-inputtext-sm" placeholder="Por ej: Lo más vendido este mes" type="text" pInputText />
+    </div>
+    <div class="b-form__label b-form__label--inter">
+      <p class="b-form__description">Ruta de la imagen:</p>
+    </div>
+    <div class="b-form__inputDiv">
+      <input formControlName="image" [(ngModel)]="product.image" class="b-form__input p-inputtext-sm" placeholder="Por ej: http://blabla.com/img.jpg" type="text" pInputText />
+    </div>
+    <div class="b-form__label b-form__label--inter">
+      <p class="b-form__description">Opiniones:</p>
+    </div>
+    <div class="b-form__inputDiv">
+      <input formControlName="stars" [(ngModel)]="product.stars" class="b-form__input p-inputtext-sm" placeholder="Un número entre 0 y 5" type="text" pInputText />
+    </div>
+    <div class="b-form__divbutton">
+      <button (click)="onNew()" class="p-button-info" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Nuevo"></button>
+      <button *ngIf="product.id != ''" (click)="onDelete()" class="p-button-danger" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Borrar"></button>
+      <button *ngIf="product.id == ''" (click)="onDelete()" disabled class="p-button-danger" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Borrar"></button>
+      <button (click)="onSubmit()" pButton style="height: 32px; width: 150px; background-color: #F89F21;" type="button" label="Guardar"></button>
+    </div>
+  </div>
+</form>
+<p-toast position="center" preventOpenDuplicates="true"></p-toast>

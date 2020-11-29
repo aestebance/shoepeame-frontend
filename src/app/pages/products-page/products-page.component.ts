@@ -9,6 +9,8 @@ import {ProductsService} from '../../shared/services/products.service';
 export class ProductsPageComponent implements OnInit {
 
   productList;
+  gallery: any = true;
+  grid: any = false;
 
   constructor(private productService: ProductsService) {
     this.productService.getProducts().subscribe((res: any) => {
@@ -19,5 +21,16 @@ export class ProductsPageComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0, 0);
+  }
+
+  searchBarChanges(changes): void {
+    this.productService.searchProduct(changes).subscribe((res: any) => {
+      this.productList = res;
+    });
+  }
+
+  showGallery(value): any {
+    this.gallery = value.gallery;
+    this.grid = value.grid;
   }
 }

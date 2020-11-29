@@ -1,11 +1,11 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  selector: 'app-gallery-table',
+  templateUrl: './gallery-table.component.html',
+  styleUrls: ['./gallery-table.component.scss']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryTableComponent implements OnInit {
 
   @Input() productList: any;
   @Output() galleryEmitter = new EventEmitter();
@@ -21,11 +21,11 @@ export class GalleryComponent implements OnInit {
     this.searchBarEmitter.emit(changes);
   }
 
-  showGrid(): any {
+  showGallery(): any {
     this.galleryEmitter.emit(
       {
-        gallery: false,
-        grid: true
+        gallery: true,
+        grid: false
       }
     );
   }

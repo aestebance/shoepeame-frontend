@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {ManagementPageComponent} from './management-page.component';
 
 const routes: Routes = [
-  { path: '', component: ManagementPageComponent }
+  { path: '', component: ManagementPageComponent },
+  { path: ':artId', component: ManagementPageComponent }
 ];
 
 @NgModule({

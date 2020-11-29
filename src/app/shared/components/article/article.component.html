@@ -1,25 +1,33 @@
 <div class="b-col">
   <figure class="b-figure">
-    <img class="b-figure__img" src="{{product.image}}" alt="{{product.name}}">
+    <img (click)="clickLogoEvent($event)" class="b-figure__img"  [src]="(product.image == '' || product.image == null) ? 'assets/images/empty.jpg' : product.image" [alt]="product.name">
     <figcaption class="b-figure__text">
-      {{product.description}}
+      {{(product.name == '') ? 'Artículo nuevo' : product.name}}
     </figcaption>
-    <p class="b-figure__price">${{product.price}}</p>
+    <p class="b-figure__price">${{(product.price == '') ? '0.00' : product.price}}</p>
   </figure>
-  <div class="b-figure b-figure__opt">
-    {{product.description}}
+  <div class="b-figure__opt">
+    {{(product.description == '') ? "Artículo nuevo" : product.description}}
   </div>
   <div class="b-figure__footer">
     <div class="b-figure__stars">
-      <star-rating [starType]="'svg'" [rating]="product.stars"></star-rating>
-      <div class="b-figure__rating">
-        {{product.stars}}
+      <div class="label-value">
+        <star-rating
+          class="b-figure__rating"
+          labelText="{{product.stars}}"
+          labelPosition="right"
+          [readOnly]="true"
+          [showHalfStars]="true"
+          [starType]="'svg'"
+          [rating]="product.stars">
+        </star-rating>
       </div>
     </div>
-    <a routerLink="">
+    <a *ngIf="!editing" routerLink="/manage/{{product.id}}">
       <div class="b-figure__button">
         <p class="b-figure__btext">Editar</p>
       </div>
     </a>
   </div>
 </div>
+<p-toast position="center" preventDuplicates="true"></p-toast>

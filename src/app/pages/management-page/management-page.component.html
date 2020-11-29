@@ -1,1 +1,19 @@
-<p>management-page works!</p>
+<div class="b-manage">
+  <div class="b-manage__title">
+    <p class="b-manage__text">Creación/edición de productos</p>
+  </div>
+  <div class="b-manage__main">
+    <div class="b-manage__box b-manage__box--left">
+      <app-form-manage [product]="product"></app-form-manage>
+    </div>
+    <div class="b-manage__fit"></div>
+    <div class="b-manage__box b-manage__box--right">
+      <div class="b-manage__preview">
+        <div class="b-manage__preview-title">
+          <p class="b-manage__preview-text">Preview del producto:</p>
+        </div>
+        <app-article [product]="product" [editing]="true"></app-article>
+      </div>
+    </div>
+  </div>
+</div>

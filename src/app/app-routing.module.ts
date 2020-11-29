@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {SharedModule} from './shared/shared.module';
+import {FormManageComponent} from './shared/components/form-manage/form-manage.component';
 
 const routes: Routes = [
   {

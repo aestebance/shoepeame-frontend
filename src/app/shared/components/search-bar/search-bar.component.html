@@ -1,0 +1,6 @@
+<form [formGroup]="searchBarForm">
+  <div class="mode-select__search">
+<!--    https://www.primefaces.org/primeng/showcase/#/chips-->
+    <p-chips (onAdd)="search($event)"  (onRemove)="search($event, true)" [max]="1" placeholder="Pulse intro para buscar..." formControlName="search"></p-chips>
+  </div>
+</form>

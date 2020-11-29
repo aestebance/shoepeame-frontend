@@ -11,7 +11,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.1",
+    "@angular/animations": "^11.0.2",
+    "@angular/cdk": "^11.0.1",
     "@angular/common": "~11.0.1",
     "@angular/compiler": "~11.0.1",
     "@angular/core": "~11.0.1",
@@ -22,6 +23,8 @@
     "angular-star-rating": "^4.0.0-beta.3",
     "bootstrap": "^4.5.3",
     "css-star-rating": "^1.2.4",
+    "primeicons": "^4.1.0",
+    "primeng": "^11.0.0-rc.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

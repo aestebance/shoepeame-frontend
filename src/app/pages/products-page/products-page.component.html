@@ -1,1 +1,2 @@
-<app-gallery [productList]="productList"></app-gallery>
+<app-gallery *ngIf="gallery" (galleryEmitter)="showGallery($event)" [productList]="productList" (searchBarEmitter)="searchBarChanges($event)"></app-gallery>
+<app-gallery-table *ngIf="grid" (galleryEmitter)="showGallery($event)" [productList]="productList" (searchBarEmitter)="searchBarChanges($event)"></app-gallery-table>

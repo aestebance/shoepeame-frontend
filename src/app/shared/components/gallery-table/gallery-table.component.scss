@@ -93,8 +93,66 @@
   }
 }
 
-@media screen and (max-width: 630px) {
-  .b-products__text {
+.b-figure {
+  &__button {
+    width: 88px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #9DC2FF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  &__btext {
+    position: relative;
+    margin: auto;
+    top: 4px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20.02px;
+    color: #2264D1;
+  }
+}
+
+host ::ng-deep {
+  .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
     display: none;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  :host ::ng-deep {
+    .p-datatable {
+      &.p-datatable-responsive-demo {
+        .p-datatable-thead > tr > th,
+        .p-datatable-tfoot > tr > td {
+          display: none !important;
+        }
+
+        .p-datatable-tbody > tr > td {
+          text-align: left;
+          display: block;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+
+          .p-column-title {
+            padding: .4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -.4em 1em -.4em -.4rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid var(--surface-d);
+          }
+        }
+      }
+    }
   }
 }
