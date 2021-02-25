@@ -26,12 +26,12 @@ export class FormManageComponent implements OnInit {
     });
   }
   public onNew(): void {
-    this.product.id = '';
-    this.product.name = '';
-    this.product.description = '';
-    this.product.stars = '';
-    this.product.image = '';
-    this.product.price = '';
+    if (this.articleRegisteredForm.valid) {
+      this.productService.createProduct(this.product).subscribe((res: any) => {
+        this.messageService.add({severity: 'success', summary: '¡Genial!', detail: 'El artículo se ha creado'});
+        this.product = res;
+      });
+    }
   }
   public onSubmit(): void {
     if (this.articleRegisteredForm.valid) {

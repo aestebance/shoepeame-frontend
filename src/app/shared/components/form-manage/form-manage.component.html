@@ -31,9 +31,8 @@
       <input formControlName="stars" [(ngModel)]="product.stars" class="b-form__input p-inputtext-sm" placeholder="Un número entre 0 y 5" type="text" pInputText />
     </div>
     <div class="b-form__divbutton">
-      <button (click)="onNew()" class="p-button-info" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Nuevo"></button>
+      <button *ngIf="product.id != ''" (click)="onNew()" class="p-button-info" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Nuevo"></button>
       <button *ngIf="product.id != ''" (click)="onDelete()" class="p-button-danger" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Borrar"></button>
-      <button *ngIf="product.id == ''" (click)="onDelete()" disabled class="p-button-danger" pButton style="margin-right: 15px; height: 32px; width: 150px;" type="button" label="Borrar"></button>
       <button (click)="onSubmit()" pButton style="height: 32px; width: 150px; background-color: #F89F21;" type="button" label="Guardar"></button>
     </div>
   </div>

@@ -26,6 +26,7 @@ export class ProductsService {
   }
 
   createProduct(article: Iarticle): Observable<object> {
+    delete article.id;
     return this.http.post('http://localhost:3000/products/', article);
   }
 
