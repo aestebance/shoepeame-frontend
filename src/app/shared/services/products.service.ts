@@ -11,26 +11,26 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<object> {
-    return this.http.get('http://localhost:3000/products');
+    return this.http.get('https://shopeame-backend.herokuapp.com/products');
   }
   getProduct(artId): Observable<object> {
-    return this.http.get('http://localhost:3000/products/' + artId);
+    return this.http.get('https://shopeame-backend.herokuapp.com/products/' + artId);
   }
 
   searchProduct(term): Observable<object> {
-    return this.http.get('http://localhost:3000/products?q=' + term);
+    return this.http.get('https://shopeame-backend.herokuapp.com/products?q=' + term);
   }
 
   updateProduct(article: Iarticle): Observable<object> {
-    return this.http.put('http://localhost:3000/products/' + article.id, article);
+    return this.http.put('https://shopeame-backend.herokuapp.com/products/' + article.id, article);
   }
 
   createProduct(article: Iarticle): Observable<object> {
     delete article.id;
-    return this.http.post('http://localhost:3000/products/', article);
+    return this.http.post('https://shopeame-backend.herokuapp.com/products/', article);
   }
 
   deleteProduct(article: Iarticle): Observable<object> {
-    return this.http.delete('http://localhost:3000/products/' + article.id);
+    return this.http.delete('https://shopeame-backend.herokuapp.com/products/' + article.id);
   }
 }
