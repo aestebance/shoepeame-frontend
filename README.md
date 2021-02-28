@@ -7,6 +7,6 @@ Technologies:
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white&labelColor=101010)]()
 [![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=SASS&logoColor=white&labelColor=101010)]()
 
-You can view an example on this page: [Shopéame](http://shopeame.aestebanceldran.com/)
+You can view an example on this page: [Shopéame](http://shopeame.aestebanceldran.com/) **Back-end has been deployed in Heroku. It maybe takes a long time to load products.
 
 ![example](https://github.com/aestebance/shoepeame-frontend-Angular/blob/master/example.png)
